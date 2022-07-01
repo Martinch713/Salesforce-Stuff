@@ -8,6 +8,7 @@ public class RemoveHTMLTags {
         List<String> plainTextList = new List<String>();
         
         // Loop through list
+        // Necessary to avoid number of results does not match interviews error
         for (string s : richTextList) {
         
             // replace Tags with uncommon characters
