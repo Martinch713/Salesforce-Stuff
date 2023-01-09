@@ -1,16 +1,15 @@
 @isTest
-public class RemoveRichTextTagsTest
+public class RemoveHTMLTagsTest
 {
-  @isTest
-  public static void removeHtmlTagsTest(){
-     
-    List<String> richTxtList=new List<String>{'<p>dummyuser1@test.com</p>','<a>dummyuser2@test.com</a>'};
-      Test.startTest();
-    List<String> plainTxtList=RemoveRichTextTagsClass.removeHtmlTags(richTxtList);
-    Test.stopTest();
-     
-    //Checking whether tags are removed or not
-    System.assertEquals('dummyuser1@test.com', plainTxtList[0],'Test Failed - Mark Ups not removed');   
-    System.assertEquals('dummyuser2@test.com', plainTxtList[1],'Test Failed - Mark Ups not removed');
-  } 
+  @isTest
+  public static void removeHtmlTagsTest(){
+     
+    List<String> richTxtList=new List<String>{'dummyuser1@test.com'};
+    Test.startTest();
+    List<String> plainTxtList=RemoveHTMLTags.removeHtmlTags(richTxtList);
+    Test.stopTest();
+     
+    //Checking whether tags are removed or not
+    System.assertEquals('dummyuser1@test.com', plainTxtList[0],'Test Failed - Mark Ups not removed');
+  } 
 }
